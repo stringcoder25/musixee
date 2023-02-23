@@ -1,0 +1,257 @@
+:root {
+    --main-color: #133917;
+    --font: #eee;
+    --time: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    }
+    * {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    /* transition: .8s; */
+    font-family: Arial, Helvetica, sans-serif;
+    }
+    section {
+    width: 100%;
+    height: 100vh;
+    /* background-image: url(background.png); */
+    background: linear-gradient(245.59deg, #4d9559 0%, #38703d 28.53%, #133917 75.52%);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    }
+    /* =================================================image style start
+    ======================================================================
+    ====================================================================== */
+    section .img {
+    width: 1500px;
+    height: 650px;
+    border-radius: 30px;
+    margin-left: 50px;
+    background-image: url(Images/About\ me-cuate.png);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    }
+    section .img .box {
+    width: 125%;
+    height: 250px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    position: relative;
+    top: 100%;
+    overflow-x: hidden;
+    transition: var(--time);
+    margin-left: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    section .img:hover .box {
+    top: 70%;
+    }
+    section .img .box ion-icon {
+    font-size: 30px;
+    color: var(--font);
+    padding: 15px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 10px;
+    z-index: 9999;
+    }
+    section .img .box ion-icon::before {
+    content: " ";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: var(--main-color);
+    margin: auto;
+    transition: var(--time);
+    z-index: -1;
+    border-radius: 10px;
+    }
+    section .img .box ion-icon:hover::before {
+    width: 100%;
+    height: 100%;
+    }
+    /* =================================================image style end
+    ===================================================================
+    =================================================================== */
+    /* =================================================content style start */
+    section .content {
+    /* background-color: red; */
+    padding: 150px;
+    }
+    section .content h1 {
+    font-size: 60px;
+    color: var(--main-color);
+    font-weight: 600;
+    }
+    section .content h1 span {
+    color: var(--font);
+    }
+    section .content p {
+    color: var(--font);
+    font-size: 20px;
+    line-height: 40px;
+    margin-top: 30px;
+    }
+    button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    margin-top: 50px;
+    }
+    button.learn-more {
+    width: 12rem;
+    height: auto;
+    }
+    button.learn-more .circle {
+    transition: var(--time);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: var(--main-color);
+    border-radius: 100px;
+    padding: 5px 0;
+    }
+    button.learn-more .circle .icon {
+    transition: var(--time);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+    }
+    button.learn-more .circle .icon.arrow {
+    transition: var(--time);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+    }
+    button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+    }
+    button.learn-more .button-text {
+    transition: var(--time);
+    position: absolute;
+    top: 0;
+    left: 10px;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: var(--main-color);
+    font-weight: 400;
+    line-height: 1.6;
+    text-transform: uppercase;
+    font-size: 20px;
+    /* background-color: red; */
+    width: 200px;
+    }
+    button:hover .circle {
+    width: 125%;
+    }
+    button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+    }
+    button:hover .button-text {
+    color: #fff;
+    }
+    /* =================================================content style end */
+    /* =================================================icon style start */
+    .icon {
+    margin-right: 20px;
+    }
+    .uiverse {
+    position: relative;
+    background: #ffffff;
+    color: var(--main-color);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 50%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: var(--time);
+    }
+    .uiverse span ion-icon {
+    font-size: 30px;
+    }
+    .tooltip {
+    position: absolute;
+    top: 10px;
+    margin-left: 0;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--time);
+    }
+    .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 10px;
+    bottom: 15px;
+    left: 100%;
+    transform: translate(-50%) rotate(45deg);
+    transition: var(--time);
+    }
+    .uiverse:hover .tooltip {
+    margin-left: -180px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    }
+    .uiverse:hover .PROTFOLI {
+    margin-left: -210px;
+    }
+    .uiverse:hover .CONTACT {
+    margin-left: -210px;
+    }
+    svg:hover span,
+    svg:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+    }
+    .uiverse:hover,
+    .uiverse:hover .tooltip,
+    .uiverse:hover .tooltip::before {
+    background: var(--main-color);
+    color: #ffffff;
+    }
+    /* =================================================icon style end */
+    
